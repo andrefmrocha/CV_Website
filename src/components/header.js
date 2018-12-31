@@ -2,6 +2,7 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Image from '../images/background.jpeg'
 import Me from '../images/eu.jpeg'
+import { FaUserCircle, FaToolbox } from 'react-icons/fa'
 
 const styles = {
   paperContainer: {
@@ -25,7 +26,7 @@ const styles = {
     textAlign: `center`,
     height: `50vh`,
     verticalAlign: `baseline`,
-    paddingTop: `5%`,
+    paddingTop: `15%`,
     fontSize: `30px`
     // lineHeight: `75vh`
   },
@@ -36,22 +37,32 @@ const styles = {
   },
   img: {
     borderRadius: `100px`,
-  }
+  },
 }
 
 
-const Header = ({ personTitle,  personDescription}) => (
+const Header = ({ personTitle, personDescription }) => (
   <Paper style={styles.paperContainer}>
     <div style={styles.paperFront}>
-      <h1 style={{ margin: 0}}>
+      <h1 style={{ margin: 0 }}>
         <Paper style={styles.nameHeader}>
-          <div style={styles.imgHeader}>
-            <img src={Me} style = {styles.img}/>
-          </div>
-          {personTitle}
-          <div>{personDescription}</div>
+          <div style={{ marginBottom: `2.5%` }}>{personTitle}</div>
+          <div
+            style={{
+              border: `1px solid white`,
+              maxWidth: `90%`,
+              marginLeft: `auto`,
+              marginRight: `auto`,
+            }}
+          />
+          <div style={{ marginTop: `2.5%` }}>{personDescription}</div>
         </Paper>
       </h1>
+      <div>
+        <FaUserCircle/>
+        <FaToolbox/>
+
+      </div>
     </div>
   </Paper>
 )
