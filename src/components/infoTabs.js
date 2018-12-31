@@ -9,15 +9,14 @@ import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import red from '@material-ui/core/colors/blue'
 
 const palette = createMuiTheme({
     palette: {
         primary: {
             main:'#bdbdbd',
             light: '#efefef',
-            contrastText: '#efefef',
-            dark: '#8d8d8d'
+            dark: '#8d8d8d',
+            contrastText: '#000'
         },
         secondary: {
             light: '#ff7961',
@@ -42,16 +41,14 @@ TabContainer.propTypes = {
 };
 
 const styles = theme => ({
-  root: {
-    color: `black`,
-    backgroundColor: theme.palette.background.paper,
-    width: `100%`,
-    flexGrow: 1,
-  },
   tabs: {
-    backgroundColor: `#373737`,
-      color: `#0000008a`,
+    backgroundColor: `#494949`,
+    color: `#bdbdbd`,
   },
+  appBar:{
+    padding: 0,
+    maxWidth: `100%`
+  }
 })
 
 class FullWidthTabs extends React.Component {
@@ -72,8 +69,7 @@ class FullWidthTabs extends React.Component {
 
         return (
             <MuiThemeProvider theme = {palette}> 
-                <div className={classes.root}>
-                    <AppBar position="static" color="default">
+                    <AppBar position="static" color="default" className = {classes.appBar} style={{padding:0}}>
                         <Tabs
                             value={this.state.value}
                             onChange={this.handleChange}
@@ -97,7 +93,6 @@ class FullWidthTabs extends React.Component {
                         <TabContainer dir={theme.direction}>Item Two</TabContainer>
                         <TabContainer dir={theme.direction}>Item Three</TabContainer>
                     </SwipeableViews>
-                </div>
             </MuiThemeProvider>
         );
     }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Image from '../images/background.jpeg'
+import Me from '../images/eu.jpeg'
 
 const styles = {
   paperContainer: {
@@ -24,9 +25,18 @@ const styles = {
     textAlign: `center`,
     height: `50vh`,
     verticalAlign: `baseline`,
-    paddingTop: `15%`,
+    paddingTop: `5%`,
+    fontSize: `30px`
     // lineHeight: `75vh`
   },
+  imgHeader:{
+    maxWidth: `30%`,
+    marginLeft: `auto`,
+    marginRight: `auto`,
+  },
+  img: {
+    borderRadius: `100px`,
+  }
 }
 
 
@@ -35,6 +45,9 @@ const Header = ({ personTitle,  personDescription}) => (
     <div style={styles.paperFront}>
       <h1 style={{ margin: 0}}>
         <Paper style={styles.nameHeader}>
+          <div style={styles.imgHeader}>
+            <img src={Me} style = {styles.img}/>
+          </div>
           {personTitle}
           <div>{personDescription}</div>
         </Paper>
