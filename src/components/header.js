@@ -2,7 +2,8 @@ import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Image from '../images/background.jpeg'
 import Me from '../images/eu.jpeg'
-import { FaUserCircle, FaToolbox } from 'react-icons/fa'
+import { FaUserCircle, FaToolbox, FaPhone } from 'react-icons/fa'
+import posed from 'react-pose'
 
 const styles = {
   paperContainer: {
@@ -38,7 +39,26 @@ const styles = {
   img: {
     borderRadius: `100px`,
   },
+  iconSize: 45,
+  iconColor: `#2B4251`,
+  square: {
+    width: `100px`,
+    height: `100px`,
+    background: `red`,
+  }
 }
+
+const Icon = posed.div({
+  hoverable: true,
+  pressable: true,
+  init: { 
+    scale: 1,
+    margin: `17% 13% 0px 13%`,
+    display: `inline-block`
+  },
+  hover: { scale: 1.4 },
+  press: { scale: 1.2}
+});
 
 
 const Header = ({ personTitle, personDescription }) => (
@@ -56,13 +76,20 @@ const Header = ({ personTitle, personDescription }) => (
             }}
           />
           <div style={{ marginTop: `2.5%` }}>{personDescription}</div>
+          <div style={{ verticalAlign: `top` }}>
+            <Icon>
+              <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
+            </Icon>
+            <Icon>
+              <FaToolbox size={styles.iconSize} color={styles.iconColor} />
+            </Icon>
+            <Icon>
+              <FaPhone size={styles.iconSize} color={styles.iconColor} />
+            </Icon>
+          </div>
         </Paper>
       </h1>
-      <div>
-        <FaUserCircle/>
-        <FaToolbox/>
 
-      </div>
     </div>
   </Paper>
 )
