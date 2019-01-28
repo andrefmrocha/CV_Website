@@ -4,6 +4,7 @@ import Image from '../images/background.jpeg'
 import Me from '../images/eu.jpeg'
 import { FaUserCircle, FaToolbox, FaPhone } from 'react-icons/fa'
 import posed from 'react-pose'
+import { Link } from 'gatsby';
 
 const styles = {
   paperContainer: {
@@ -41,10 +42,8 @@ const styles = {
   },
   iconSize: 45,
   iconColor: `#2B4251`,
-  square: {
-    width: `100px`,
-    height: `100px`,
-    background: `red`,
+  textInfo:{
+    display: `inline-block`,
   }
 }
 
@@ -77,19 +76,24 @@ const Header = ({ personTitle, personDescription }) => (
           />
           <div style={{ marginTop: `2.5%` }}>{personDescription}</div>
           <div style={{ verticalAlign: `top` }}>
-            <Icon>
-              <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
-            </Icon>
-            <Icon>
-              <FaToolbox size={styles.iconSize} color={styles.iconColor} />
-            </Icon>
-            <Icon>
-              <FaPhone size={styles.iconSize} color={styles.iconColor} />
-            </Icon>
+            <a href="#info-tabs" style={{ backgroundImage: 'none' }}>
+              <Icon>
+                <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
+              </Icon>
+            </a>
+            <a href="#info-tabs" style={{ backgroundImage: 'none' }}>
+              <Icon>
+                <FaToolbox size={styles.iconSize} color={styles.iconColor} />
+              </Icon>
+            </a>
+            <a href="#info-tabs" style={{ backgroundImage: 'none' }}>
+              <Icon>
+                <FaPhone size={styles.iconSize} color={styles.iconColor} />
+              </Icon>
+            </a>
           </div>
         </Paper>
       </h1>
-
     </div>
   </Paper>
 )

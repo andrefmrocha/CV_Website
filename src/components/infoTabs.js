@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import {
   withStyles,
@@ -66,35 +67,47 @@ class FullWidthTabs extends React.Component {
 
     render() {
         const { classes, theme } = this.props;
-
-        return (
-            <MuiThemeProvider theme = {palette}> 
-                    <AppBar position="static" color="default" className = {classes.appBar} style={{padding:0}}>
-                        <Tabs
-                            value={this.state.value}
-                            onChange={this.handleChange}
-                            indicatorColor="primary"
-                            textColor="primary"
-                            fullWidth
-                            className = {classes.tabs}
-                        >
-                            <Tab label="About Me" />
-                            <Tab label="Projects" />
-                            <Tab label="Contact" />
-                        </Tabs>
-                    </AppBar>
-                    <SwipeableViews
-                        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                        index={this.state.value}
-                        onChangeIndex={this.handleChangeIndex}
-                        className = {classes.tabs}
-                    >
-                        <TabContainer dir={theme.direction}>Item One</TabContainer>
-                        <TabContainer dir={theme.direction}>Item Two</TabContainer>
-                        <TabContainer dir={theme.direction}>Item Three</TabContainer>
-                    </SwipeableViews>
-            </MuiThemeProvider>
-        );
+        return <MuiThemeProvider theme={palette}>
+            <AppBar position="static" color="default" className={classes.appBar} style={{ padding: 0 }} id="info-tabs">
+              <Tabs value={this.state.value} onChange={this.handleChange} indicatorColor="primary" textColor="primary" fullWidth className={classes.tabs}>
+                <Tab label="About Me" />
+                <Tab label="Projects" />
+                <Tab label="Contact" />
+              </Tabs>
+            </AppBar>
+            <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={this.state.value} onChangeIndex={this.handleChangeIndex} className={classes.tabs}>
+              <TabContainer dir={theme.direction}>
+                Item One
+              </TabContainer>
+              <TabContainer dir={theme.direction}>
+                <StaticQuery query={graphql`
+                    query projectsQuery {
+                      allMarkdownRemark {
+                        edges {
+                          node {
+                            id
+                            frontmatter {
+                              title
+                              subtitle
+                            }
+                          }
+                        }
+                      }
+                    }
+                  `} render={data =>( 
+                      <div>
+                          <h1>
+                          {data.allMarkdownRemark.edges[0].node.frontmatter.title}
+                          </h1>
+                          <div>{data.allMarkdownRemark.edges[0].node.frontmatter.subtitle}</div>
+                      </div>
+                  )} />
+              </TabContainer>
+              <TabContainer dir={theme.direction}>
+                Item Three
+              </TabContainer>
+            </SwipeableViews>
+          </MuiThemeProvider>
     }
 }
 
@@ -103,4 +116,15 @@ FullWidthTabs.propTypes = {
     theme: PropTypes.object.isRequired,
 };
 
+
 export default withStyles(styles, { withTheme: true })(FullWidthTabs);  
+
+// export const pageQuery = graphql`
+//   query projectsQuery{
+//     markdownRemark{
+//       frontmatter {
+//         title
+//       }
+//     }
+//   }
+//   `
