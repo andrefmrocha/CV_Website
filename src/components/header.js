@@ -4,7 +4,7 @@ import Image from '../images/background.jpeg'
 import Me from '../images/eu.jpeg'
 import { FaUserCircle, FaToolbox, FaPhone } from 'react-icons/fa'
 import posed from 'react-pose'
-import { Link } from 'gatsby';
+import { Link, animateScroll as scroll} from 'react-scroll';
 
 const styles = {
   paperContainer: {
@@ -76,21 +76,21 @@ const Header = ({ personTitle, personDescription }) => (
           />
           <div style={{ marginTop: `2.5%` }}>{personDescription}</div>
           <div style={{ verticalAlign: `top` }}>
-            <a href="#info-tabs" style={{ backgroundImage: 'none' }}>
+            <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
               <Icon>
                 <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
               </Icon>
-            </a>
-            <a href="#info-tabs" style={{ backgroundImage: 'none' }}>
+            </Link>
+            <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
               <Icon>
                 <FaToolbox size={styles.iconSize} color={styles.iconColor} />
               </Icon>
-            </a>
-            <a href="#info-tabs" style={{ backgroundImage: 'none' }}>
+            </Link>
+            <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
               <Icon>
                 <FaPhone size={styles.iconSize} color={styles.iconColor} />
               </Icon>
-            </a>
+            </Link>
           </div>
         </Paper>
       </h1>

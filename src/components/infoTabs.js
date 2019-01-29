@@ -18,6 +18,8 @@ import {
   ListItem,
   ListItemText,
 } from '@material-ui/core';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 
 const palette = createMuiTheme({
     palette: {
@@ -63,7 +65,8 @@ const panelStyling = {
     },
     text:
     {
-        color: `#bdbdbd`
+        color: `#bdbdbd`,
+        width: `100%`
     }
 }
 
@@ -132,30 +135,63 @@ class FullWidthTabs extends React.Component {
                             frontmatter {
                               title
                               subtitle
+                              link
+                              image_1 {
+                                publicURL
+                              }
+                              image_2 {
+                                publicURL
+                              }
                             }
                           }
                         }
                       }
                     }
-                  `} render={data => 
-                  <List>                    
-                      {data.allMarkdownRemark.edges.map(post =>(      
+                  `} render={data => <List>
+                      {data.allMarkdownRemark.edges.map(post => (
                         <ListItem>
-                            <ListItemText>
-                                <StyledPanel>
-                                <ExpansionPanelSummary>
-                                    <h3 style={panelStyling.h1}>{post.node.frontmatter.title}</h3>
-                                    <p style={panelStyling.subtitle}>{post.node.frontmatter.subtitle}</p>
-                                </ExpansionPanelSummary>
-                                <ExpansionPanelDetails>
-                                        <div dangerouslySetInnerHTML={{ __html: post.node.html }} style={panelStyling.text}/>
-                                </ExpansionPanelDetails>
-                                </StyledPanel>
-                            </ListItemText>
+                          <ListItemText>
+                            <StyledPanel>
+                              <ExpansionPanelSummary>
+                                <h3 style={panelStyling.h1}>
+                                  {post.node.frontmatter.title}
+                                </h3>
+                                <p style={panelStyling.subtitle}>
+                                  {post.node.frontmatter.subtitle}
+                                </p>
+                              </ExpansionPanelSummary>
+                              <ExpansionPanelDetails>
+                                <div>
+                                    <div
+                                        dangerouslySetInnerHTML={{
+                                        __html: post.node.html,
+                                        }}
+                                        style={panelStyling.text}
+                                    />
+                                    <div>
+                                        Want to know more?
+                                        <a
+                                        href={post.node.frontmatter.link}
+                                        >
+                                        Click here
+                                        </a>
+                                    </div>
+
+                                    <Carousel>
+                                        <div>
+                                            <img src={post.node.frontmatter.image_1.publicURL}/>
+                                        </div>
+                                        <div>
+                                            <img src={post.node.frontmatter.image_2.publicURL}/>
+                                        </div>
+                                    </Carousel>
+                                </div>
+                              </ExpansionPanelDetails>
+                            </StyledPanel>
+                          </ListItemText>
                         </ListItem>
                       ))}
-                  </List>
-                } />
+                    </List>} />
               </TabContainer>
               <TabContainer dir={theme.direction}>
                 Item Three
