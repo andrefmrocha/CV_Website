@@ -10,6 +10,14 @@ import SwipeableViews from 'react-swipeable-views';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import {
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+  List,
+  ListItem,
+  ListItemText,
+} from '@material-ui/core';
 
 const palette = createMuiTheme({
     palette: {
@@ -36,10 +44,41 @@ function TabContainer({ children, dir }) {
     );
 }
 
+const StyledPanel = withStyles(
+    {
+        root:{
+            backgroundColor: `inherit`,
+        }
+    }
+)(ExpansionPanel)
+
+const panelStyling = {
+    h1:{
+        color: `#bdbdbd`
+    },
+    subtitle:
+    {
+        color: `#bdbdbd`,
+
+    },
+    text:
+    {
+        color: `#bdbdbd`
+    }
+}
+
 TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
     dir: PropTypes.string.isRequired,
 };
+
+const StyledList = withStyles(
+    {
+        root:{
+
+        }
+    }
+)
 
 const styles = theme => ({
   tabs: {
@@ -49,6 +88,9 @@ const styles = theme => ({
   appBar:{
     padding: 0,
     maxWidth: `100%`
+  },
+  textColor:{
+      textColor: `#bdbdbd`
   }
 })
 
@@ -86,6 +128,7 @@ class FullWidthTabs extends React.Component {
                         edges {
                           node {
                             id
+                            html
                             frontmatter {
                               title
                               subtitle
@@ -94,14 +137,25 @@ class FullWidthTabs extends React.Component {
                         }
                       }
                     }
-                  `} render={data =>( 
-                      <div>
-                          <h1>
-                          {data.allMarkdownRemark.edges[0].node.frontmatter.title}
-                          </h1>
-                          <div>{data.allMarkdownRemark.edges[0].node.frontmatter.subtitle}</div>
-                      </div>
-                  )} />
+                  `} render={data => 
+                  <List>                    
+                      {data.allMarkdownRemark.edges.map(post =>(      
+                        <ListItem>
+                            <ListItemText>
+                                <StyledPanel>
+                                <ExpansionPanelSummary>
+                                    <h3 style={panelStyling.h1}>{post.node.frontmatter.title}</h3>
+                                    <p style={panelStyling.subtitle}>{post.node.frontmatter.subtitle}</p>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                        <div dangerouslySetInnerHTML={{ __html: post.node.html }} style={panelStyling.text}/>
+                                </ExpansionPanelDetails>
+                                </StyledPanel>
+                            </ListItemText>
+                        </ListItem>
+                      ))}
+                  </List>
+                } />
               </TabContainer>
               <TabContainer dir={theme.direction}>
                 Item Three
