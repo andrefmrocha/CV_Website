@@ -20,6 +20,9 @@ import {
 } from '@material-ui/core';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Radium from 'radium'
+
 
 const palette = createMuiTheme({
     palette: {
@@ -54,20 +57,32 @@ const StyledPanel = withStyles(
     }
 )(ExpansionPanel)
 
-const panelStyling = {
-    h1:{
-        color: `#bdbdbd`
-    },
-    subtitle:
-    {
-        color: `#bdbdbd`,
 
+const panelStyling = {
+  h1: {
+    color: `#bdbdbd`,
+    paddingBottom: `2%`,
+    paddingRight: `5%`,
+  },
+  subtitle: {
+    color: `#bdbdbd`,
+    paddingTop: `4%`,
+  },
+  text: {
+    color: `#bdbdbd`,
+    width: `100%`,
+  },
+  link: {
+    paddingLeft: `10px`,
+    backgroundImage: `none`,
+    color: `inherit`,
+    fontWeight: `bold`,
+    textShadow: `none`,
+    ':hover': {
+      color: `red`,
+      textShadow: `0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;`,
     },
-    text:
-    {
-        color: `#bdbdbd`,
-        width: `100%`
-    }
+  },
 }
 
 TabContainer.propTypes = {
@@ -127,7 +142,7 @@ class FullWidthTabs extends React.Component {
               <TabContainer dir={theme.direction}>
                 <StaticQuery query={graphql`
                     query projectsQuery {
-                      allMarkdownRemark {
+                      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
                         edges {
                           node {
                             id
@@ -152,7 +167,7 @@ class FullWidthTabs extends React.Component {
                         <ListItem>
                           <ListItemText>
                             <StyledPanel>
-                              <ExpansionPanelSummary>
+                              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
                                 <h3 style={panelStyling.h1}>
                                   {post.node.frontmatter.title}
                                 </h3>
@@ -162,29 +177,40 @@ class FullWidthTabs extends React.Component {
                               </ExpansionPanelSummary>
                               <ExpansionPanelDetails>
                                 <div>
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                        __html: post.node.html,
-                                        }}
-                                        style={panelStyling.text}
-                                    />
-                                    <div>
-                                        Want to know more?
-                                        <a
-                                        href={post.node.frontmatter.link}
-                                        >
-                                        Click here
-                                        </a>
-                                    </div>
+                                  <div
+                                    dangerouslySetInnerHTML={{
+                                      __html: post.node.html,
+                                    }}
+                                    style={panelStyling.text}
+                                  />
+                                  <div style ={panelStyling.text}>
+                                    Want to know more?
+                                    <a
+                                      href={post.node.frontmatter.link}
+                                      style={panelStyling.link}
+                                    >
+                                      Click here
+                                    </a>
+                                  </div>
 
-                                    <Carousel>
-                                        <div>
-                                            <img src={post.node.frontmatter.image_1.publicURL}/>
-                                        </div>
-                                        <div>
-                                            <img src={post.node.frontmatter.image_2.publicURL}/>
-                                        </div>
-                                    </Carousel>
+                                  <Carousel>
+                                    <div>
+                                      <img
+                                        src={
+                                          post.node.frontmatter.image_1
+                                            .publicURL
+                                        }
+                                      />
+                                    </div>
+                                    <div>
+                                      <img
+                                        src={
+                                          post.node.frontmatter.image_2
+                                            .publicURL
+                                        }
+                                      />
+                                    </div>
+                                  </Carousel>
                                 </div>
                               </ExpansionPanelDetails>
                             </StyledPanel>
@@ -207,7 +233,7 @@ FullWidthTabs.propTypes = {
 };
 
 
-export default withStyles(styles, { withTheme: true })(FullWidthTabs);  
+export default withStyles(styles, { withTheme: true })(Radium(FullWidthTabs));  
 
 // export const pageQuery = graphql`
 //   query projectsQuery{
