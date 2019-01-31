@@ -18,7 +18,7 @@ const styles = {
   paperFront: {
     margin: `auto`,
     maxWidth: `50%`,
-    paddingTop: `15%`,
+    paddingTop: `12%`,
     verticalAlign: `middle`,
   },
   nameHeader: {
@@ -26,9 +26,8 @@ const styles = {
     backgroundColor: `rgba(255, 255, 255, 0.4)`,
     textDecoration: `none`,
     textAlign: `center`,
-    height: `50vh`,
     verticalAlign: `baseline`,
-    paddingTop: `15%`,
+    paddingTop: `10%`,
     fontSize: `30px`
     // lineHeight: `75vh`
   },
@@ -74,8 +73,8 @@ const Header = ({ personTitle, personDescription }) => (
               marginRight: `auto`,
             }}
           />
-          <div style={{ marginTop: `2.5%` }}>{personDescription}</div>
-          <div style={{ verticalAlign: `top` }}>
+          <div style={{ paddingTop: `2.5%` }}>{personDescription}</div>
+          <div style={{ verticalAlign: `top` , paddingBottom: `3%`}}>
             <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
               <Icon>
                 <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
