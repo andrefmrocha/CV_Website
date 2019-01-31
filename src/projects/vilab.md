@@ -4,7 +4,9 @@ subtitle: "A project done alongside INESC TEC with the purpose of developping fa
 to recognize the face of a person with their identity card, using Siamese Twins Neural Networks."
 link: https://github.com/andrefmrocha/VI_LAB_2018_Card_Detection
 image_1: "../images/siamese-network.png"
-image_2: "../images/siamese-network-2.jpg"
+image_2: "../images/siamese-network-2.png"
+image_1_legend: "A visual example of siamese network"
+image_2_legend: "A visual example of a autoencoder"
 date: "2018-08-01"
 ---
 

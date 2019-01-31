@@ -4,6 +4,8 @@ subtitle: "The development of a showcase website for the company Interactiva Con
 link: https://github.com/andrefmrocha/Interactiva_Consulting
 image_1: "../images/interactiva-consulting.png"
 image_2: "../images/interactiva-consulting-2.png"
+image_1_legend: "The Website Front Page"
+image_2_legend: "The Services Page"
 date: "2018-09-01"
 ---
 

@@ -4,6 +4,8 @@ subtitle: "An experimental chatbot to interact with the services of our universi
 link: https://github.com/NIAEFEUP/chatbot-sigarra
 image_1: "../images/chatbot-sigarra.png"
 image_2: "../images/pipboy-2.png"
+image_1_legend: "First image"
+image_2_legend: "Second image"
 date: "2018-05-30"
 ---
 

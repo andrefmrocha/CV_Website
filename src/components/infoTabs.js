@@ -151,12 +151,15 @@ class FullWidthTabs extends React.Component {
                               title
                               subtitle
                               link
+                              date
                               image_1 {
                                 publicURL
                               }
                               image_2 {
                                 publicURL
                               }
+                              image_1_legend
+                              image_2_legend
                             }
                           }
                         }
@@ -167,7 +170,9 @@ class FullWidthTabs extends React.Component {
                         <ListItem>
                           <ListItemText>
                             <StyledPanel>
-                              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon/>}>
+                              <ExpansionPanelSummary
+                                expandIcon={<ExpandMoreIcon />}
+                              >
                                 <h3 style={panelStyling.h1}>
                                   {post.node.frontmatter.title}
                                 </h3>
@@ -183,7 +188,7 @@ class FullWidthTabs extends React.Component {
                                     }}
                                     style={panelStyling.text}
                                   />
-                                  <div style ={panelStyling.text}>
+                                  <div style={panelStyling.text}>
                                     Want to know more?
                                     <a
                                       href={post.node.frontmatter.link}
@@ -201,14 +206,16 @@ class FullWidthTabs extends React.Component {
                                             .publicURL
                                         }
                                       />
+                                      <p className="legend">{post.node.frontmatter.image_1_legend}</p>
                                     </div>
                                     <div>
                                       <img
                                         src={
                                           post.node.frontmatter.image_2
-                                            .publicURL
+                                          .publicURL
                                         }
                                       />
+                                        <p className="legend">{post.node.frontmatter.image_2_legend}</p>
                                     </div>
                                   </Carousel>
                                 </div>

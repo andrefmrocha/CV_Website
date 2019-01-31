@@ -4,6 +4,8 @@ subtitle: "An experimental attempt to make a functional Pipboy on the web"
 link: https://github.com/andrefmrocha/Pipboy
 image_1: "../images/pipboy.png"
 image_2: "../images/pipboy-2.png"
+image_1_legend: "Status Menu"
+image_2_legend: "Inventory Menu"
 date: "2018-07-15"
 ---
 
