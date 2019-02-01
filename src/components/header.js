@@ -3,8 +3,8 @@ import Paper from '@material-ui/core/Paper'
 import Image from '../images/background.jpeg'
 import Me from '../images/eu.jpeg'
 import { FaUserCircle, FaToolbox, FaPhone } from 'react-icons/fa'
-import posed from 'react-pose'
 import { Link, animateScroll as scroll} from 'react-scroll';
+import Icon from '../components/icon'
 
 const styles = {
   paperContainer: {
@@ -45,18 +45,6 @@ const styles = {
     display: `inline-block`,
   }
 }
-
-const Icon = posed.div({
-  hoverable: true,
-  pressable: true,
-  init: { 
-    scale: 1,
-    margin: `17% 13% 0px 13%`,
-    display: `inline-block`
-  },
-  hover: { scale: 1.4 },
-  press: { scale: 1.2}
-});
 
 
 const Header = ({ personTitle, personDescription }) => (

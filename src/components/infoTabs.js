@@ -22,7 +22,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Radium from 'radium'
-
+import About from '../components/aboutMe'
 
 const palette = createMuiTheme({
     palette: {
@@ -191,6 +191,7 @@ class FullWidthTabs extends React.Component {
                                   <div style={panelStyling.text}>
                                     Want to know more?
                                     <a
+                                      target="_blank" rel="noopener noreferrer"
                                       href={post.node.frontmatter.link}
                                       style={panelStyling.link}
                                     >
@@ -227,7 +228,7 @@ class FullWidthTabs extends React.Component {
                     </List>} />
               </TabContainer>
               <TabContainer dir={theme.direction}>
-                Item Three
+                <About></About>
               </TabContainer>
             </SwipeableViews>
           </MuiThemeProvider>
