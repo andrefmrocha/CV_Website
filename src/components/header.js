@@ -1,7 +1,6 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 import Image from '../images/background.jpeg'
-import Me from '../images/eu.jpeg'
 import { FaUserCircle, FaToolbox, FaPhone } from 'react-icons/fa'
 import { Link, animateScroll as scroll} from 'react-scroll';
 import Icon from '../components/icon'

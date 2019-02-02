@@ -22,7 +22,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Radium from 'radium'
-import About from '../components/aboutMe'
+import Contact from './contact'
+import About from './aboutMe'
 
 const palette = createMuiTheme({
     palette: {
@@ -137,7 +138,7 @@ class FullWidthTabs extends React.Component {
             </AppBar>
             <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={this.state.value} onChangeIndex={this.handleChangeIndex} className={classes.tabs}>
               <TabContainer dir={theme.direction}>
-                Item One
+                <About/>
               </TabContainer>
               <TabContainer dir={theme.direction}>
                 <StaticQuery query={graphql`
@@ -228,7 +229,7 @@ class FullWidthTabs extends React.Component {
                     </List>} />
               </TabContainer>
               <TabContainer dir={theme.direction}>
-                <About></About>
+                <Contact></Contact>
               </TabContainer>
             </SwipeableViews>
           </MuiThemeProvider>
