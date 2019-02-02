@@ -15,6 +15,10 @@ import {
     withStyles,
 } from '@material-ui/core/styles'
 import Me from '../images/eu.jpeg'
+import Green from '../images/green.png'
+import Blue from '../images/blue.png'
+import DiamondOne from '../images/diamond-one.png'
+import DiamondTwo from '../images/diamond-two.png'
 import {
     FaMapMarkerAlt,
     FaCalendar,
@@ -54,6 +58,17 @@ const styles = {
   h:{
       marginTop:0,
       marginBottom:0,
+  },
+  scale:{
+      width: `25px`,
+      height :`25px`,
+      float: `right`
+  },
+  skillsGrid:{
+      maxWidth: `100%`
+  },
+  leftGrid:{
+      borderLeft: `0.5px solid black`
   }
 }
 
@@ -102,52 +117,86 @@ const About = () => (
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container spacing={24} alignItems="center" justify="center">
-              <Grid item xs={4}>
+            <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                  <h4 style={styles.h}>Science and Technology</h4>
-                  <h5 style={styles.h}>Colégio de Ermesinde</h5>
-                  <FaMapMarkerAlt />
-                  Ermesinde, Porto
-                  <br />
-                  <FaCalendar /> Set 2004 - Jun 2017
-                  <br />
-                  <FaGraduationCap /> Jun 2017
-                  <br />
-                  <FaLink />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.colegiodeermesinde.com"
-                  >
-                    https://www.colegiodeermesinde.com
-                  </a>
+                    <h4 style={styles.h}>Science and Technology</h4>
+                    <h5 style={styles.h}>Colégio de Ermesinde</h5>
+                    <FaMapMarkerAlt />
+                    Ermesinde, Porto
+                    <br />
+                    <FaCalendar /> Set 2004 - Jun 2017
+                    <br />
+                    <FaGraduationCap /> Jun 2017
+                    <br />
+                    <FaLink />
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.colegiodeermesinde.com"
+                    >
+                        https://www.colegiodeermesinde.com
+                     </a>
                 </Paper>
-              </Grid>
-              <Grid item xs={4}>
+            </Grid>
+            <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                  <h4 style={styles.h}>
-                    Integrated Masters in Informatics and Computeer Engineering
-                  </h4>
-                  <h5 style={styles.h}>
-                    Faculty of Engineering of Porto (FEUP)
-                  </h5>
-                  <FaMapMarkerAlt />
-                  Porto
-                  <br />
-                  <FaCalendar /> Set 2017 - Today
-                  <br />
-                  <FaGraduationCap /> Expected in June 2022
-                  <br />
-                  <FaLink />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://sigarra.up.pt/feup/en/"
-                  >
-                    https://sigarra.up.pt/feup/en/
-                  </a>
+                    <h4 style={styles.h}>
+                        Integrated Masters in Informatics and Computeer Engineering
+                    </h4>
+                    <h5 style={styles.h}>
+                        Faculty of Engineering of Porto (FEUP)
+                    </h5>
+                    <FaMapMarkerAlt />
+                    Porto
+                    <br />
+                    <FaCalendar /> Set 2017 - Today
+                    <br />
+                    <FaGraduationCap /> Expected in June 2022
+                    <br />
+                    <FaLink />
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://sigarra.up.pt/feup/en/"
+                    >
+                        https://sigarra.up.pt/feup/en/
+                    </a>
                 </Paper>
-              </Grid>
+            </Grid>
+            <Grid item xs={4}>
+                <Paper style={styles.paper}>
+                    <h4 style={styles.h}>
+                        Cambridge Certificate of Proficiency in English
+                    </h4>
+                    <h5 style={styles.h}>Cambridge University</h5>
+                    <FaMapMarkerAlt />
+                    Ermesinde, Porto
+                    <br />
+                    <FaCalendar /> Jan 2018
+                    <br />
+                    <FaLink />
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.cambridgeenglish.org/exams-and-tests/proficiency/"
+                    >
+                        https://www.cambridgeenglish.org/exams-and-tests/proficiency/
+                    </a>
+                </Paper>
+            </Grid>
+            </Grid>
+          </ExpansionPanelDetails>
+        </AboutPanel>
+      </ListItemText>
+    </ListItem>
+    <ListItem>
+      <ListItemText>
+        <AboutPanel>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+            <h2 style={styles.title}>Education and Experience</h2>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails>
+            <Grid container spacing={24} alignItems="center" justify="center">
               <Grid item xs={4}>
                 <Paper style={styles.paper}>
                   <h4 style={styles.h}>Member</h4>
@@ -218,27 +267,6 @@ const About = () => (
                   </a>
                 </Paper>
               </Grid>
-              <Grid item xs={4}>
-                <Paper style={styles.paper}>
-                  <h4 style={styles.h}>
-                    Cambridge Certificate of Proficiency in English
-                  </h4>
-                  <h5 style={styles.h}>Cambridge University</h5>
-                  <FaMapMarkerAlt />
-                  Ermesinde, Porto
-                  <br />
-                  <FaCalendar /> Jan 2018
-                  <br />
-                  <FaLink />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.cambridgeenglish.org/exams-and-tests/proficiency/"
-                  >
-                    https://www.cambridgeenglish.org/exams-and-tests/proficiency/
-                  </a>
-                </Paper>
-              </Grid>
             </Grid>
           </ExpansionPanelDetails>
         </AboutPanel>
@@ -252,41 +280,125 @@ const About = () => (
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container spacing={24}>
-              <Grid item xs={2}>
-                <Paper>C/C++</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            C/C++ -    
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Javascript</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Javascript   
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Python</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Python    
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>React</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            React   
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Node.js</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Node.js   
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Begginer <img style={styles.scale} src={Green} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Bootstrap</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Bootstrap    
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Jquery</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Jquery   
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Keras/Tensorflow</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Linux    
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Linux</Paper>
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Bash    
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
-              <Grid item xs={2}>
-                <Paper>Bash</Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper>Git</Paper>
-              </Grid>
-              <Grid item xs={2}>
-                <Paper />
+              <Grid item xs={3}>
+                <Paper>
+                    <Grid container spacing={24}>
+                        <Grid item xs={6}>
+                            Git    
+                        </Grid>
+                        <Grid item xs={6} style={styles.leftGrid}>
+                            <div> Expert <img style={styles.scale} src={DiamondTwo} /></div>
+                        </Grid>
+                    </Grid>
+                </Paper>
               </Grid>
             </Grid>
           </ExpansionPanelDetails>
