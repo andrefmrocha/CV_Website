@@ -113,7 +113,7 @@ const About = () => (
       <ListItemText>
         <AboutPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <h2 style={styles.title}>Education and Experience</h2>
+            <h2 style={styles.title}>Education</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container spacing={24} alignItems="center" justify="center">
@@ -193,7 +193,7 @@ const About = () => (
       <ListItemText>
         <AboutPanel>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-            <h2 style={styles.title}>Education and Experience</h2>
+            <h2 style={styles.title}>Experience</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container spacing={24} alignItems="center" justify="center">
