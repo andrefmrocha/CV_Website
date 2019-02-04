@@ -28,6 +28,8 @@ import {
     FaMedal
 }from 'react-icons/fa'
 
+import '../css/linkelements.css'
+//TO-DO CHANGE TEXT SO THAT ONLY TITLES ARE IN CENTER
 const AboutPanel = withStyles(
     {
         root: {
@@ -53,11 +55,20 @@ const styles = {
     color: `#bdbdbd`,
   },
   paper:{
-      textAlign: `center`,
+    //   textAlign: `center`,
+    paddingLeft: `5%`,
+    paddingBottom: `5%,`
   },
   h:{
       marginTop:0,
       marginBottom:0,
+      textAlign: `center`,
+  },
+  titleh:{
+    paddingTop: `5%`
+  },
+  subtitle:{
+      paddingBottom: `2%`
   },
   scale:{
       width: `25px`,
@@ -93,11 +104,12 @@ const About = () => (
                   interesting skills.
                 </p>
                 <p>
-                  Dedicated Linux fan{' '}
+                  Dedicated Linux fan
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://github.com/andrefmrocha/dotfiles"
+                    className="text-links"
                   >
                     (come check out my dotfiles!){' '}
                   </a>
@@ -119,8 +131,8 @@ const About = () => (
             <Grid container spacing={24} alignItems="center" justify="center">
             <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                    <h4 style={styles.h}>Science and Technology</h4>
-                    <h5 style={styles.h}>Colégio de Ermesinde</h5>
+                    <h4 style={Object.assign({}, styles.titleh, styles.h)}>Science and Technology</h4>
+                    <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Colégio de Ermesinde</h5>
                     <FaMapMarkerAlt />
                     Ermesinde, Porto
                     <br />
@@ -140,10 +152,10 @@ const About = () => (
             </Grid>
             <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                    <h4 style={styles.h}>
+                    <h4 style={Object.assign({}, styles.titleh, styles.h)}>
                         Integrated Masters in Informatics and Computeer Engineering
                     </h4>
-                    <h5 style={styles.h}>
+                    <h5 style={Object.assign({}, styles.h, styles.subtitle)}>
                         Faculty of Engineering of Porto (FEUP)
                     </h5>
                     <FaMapMarkerAlt />
@@ -165,10 +177,10 @@ const About = () => (
             </Grid>
             <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                    <h4 style={styles.h}>
+                    <h4 style={Object.assign({}, styles.titleh, styles.h)}>
                         Cambridge Certificate of Proficiency in English
                     </h4>
-                    <h5 style={styles.h}>Cambridge University</h5>
+                    <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Cambridge University</h5>
                     <FaMapMarkerAlt />
                     Ermesinde, Porto
                     <br />
@@ -199,8 +211,8 @@ const About = () => (
             <Grid container spacing={24} alignItems="center" justify="center">
               <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                  <h4 style={styles.h}>Member</h4>
-                  <h5 style={styles.h}>NIAEFEUP</h5>
+                  <h4 style={Object.assign({}, styles.titleh, styles.h)}>Member</h4>
+                  <h5 style={Object.assign({}, styles.h, styles.subtitle)}>NIAEFEUP</h5>
                   <FaMapMarkerAlt />
                   FEUP, Porto
                   <br />
@@ -218,8 +230,8 @@ const About = () => (
               </Grid>
               <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                  <h4 style={styles.h}>Competitor and Organizer</h4>
-                  <h5 style={styles.h}>Google Hash Code</h5>
+                  <h4 style={Object.assign({}, styles.titleh, styles.h)}>Competitor and Organizer</h4>
+                  <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Google Hash Code</h5>
                   <FaMapMarkerAlt />
                   Porto - Porto Hub
                   <br />
@@ -248,10 +260,10 @@ const About = () => (
               </Grid>
               <Grid item xs={4}>
                 <Paper style={styles.paper}>
-                  <h4 style={styles.h}>
+                  <h4 style={Object.assign({}, styles.titleh, styles.h)}>
                     Member of the Public Relations Department
                   </h4>
-                  <h5 style={styles.h}>Semana de Informática 2018</h5>
+                  <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Semana de Informática 2018</h5>
                   <FaMapMarkerAlt />
                   FEUP, Porto
                   <br />

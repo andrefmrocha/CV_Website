@@ -1,0 +1,11 @@
+a.text-links, div > a{
+    color: inherit;    
+    padding-left: 10px;
+    background-image: none;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+a.text-links:hover{
+    text-shadow: 0px 1px 1px #bdbdbd;
+}

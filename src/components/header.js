@@ -17,7 +17,7 @@ const styles = {
   paperFront: {
     margin: `auto`,
     maxWidth: `50%`,
-    paddingTop: `12%`,
+    paddingTop: `5.5%`,
     verticalAlign: `middle`,
   },
   nameHeader: {
@@ -27,10 +27,11 @@ const styles = {
     textAlign: `center`,
     verticalAlign: `baseline`,
     paddingTop: `10%`,
-    fontSize: `30px`
+    fontSize: `30px`,
+    maxHeight: `50%`,
     // lineHeight: `75vh`
   },
-  imgHeader:{
+  imgHeader: {
     maxWidth: `30%`,
     marginLeft: `auto`,
     marginRight: `auto`,
@@ -40,9 +41,9 @@ const styles = {
   },
   iconSize: 45,
   iconColor: `#2B4251`,
-  textInfo:{
+  textInfo: {
     display: `inline-block`,
-  }
+  },
 }
 
 

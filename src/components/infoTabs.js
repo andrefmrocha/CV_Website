@@ -138,7 +138,7 @@ class FullWidthTabs extends React.Component {
             </AppBar>
             <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={this.state.value} onChangeIndex={this.handleChangeIndex} className={classes.tabs}>
               <TabContainer dir={theme.direction}>
-                <About/>
+                <About />
               </TabContainer>
               <TabContainer dir={theme.direction}>
                 <StaticQuery query={graphql`
@@ -188,13 +188,15 @@ class FullWidthTabs extends React.Component {
                                       __html: post.node.html,
                                     }}
                                     style={panelStyling.text}
+                                    className="text-links"
                                   />
                                   <div style={panelStyling.text}>
                                     Want to know more?
                                     <a
-                                      target="_blank" rel="noopener noreferrer"
+                                      target="_blank"
+                                      rel="noopener noreferrer"
                                       href={post.node.frontmatter.link}
-                                      style={panelStyling.link}
+                                      className="text-links"
                                     >
                                       Click here
                                     </a>
@@ -208,16 +210,26 @@ class FullWidthTabs extends React.Component {
                                             .publicURL
                                         }
                                       />
-                                      <p className="legend">{post.node.frontmatter.image_1_legend}</p>
+                                      <p className="legend">
+                                        {
+                                          post.node.frontmatter
+                                            .image_1_legend
+                                        }
+                                      </p>
                                     </div>
                                     <div>
                                       <img
                                         src={
                                           post.node.frontmatter.image_2
-                                          .publicURL
+                                            .publicURL
                                         }
                                       />
-                                        <p className="legend">{post.node.frontmatter.image_2_legend}</p>
+                                      <p className="legend">
+                                        {
+                                          post.node.frontmatter
+                                            .image_2_legend
+                                        }
+                                      </p>
                                     </div>
                                   </Carousel>
                                 </div>
@@ -229,7 +241,7 @@ class FullWidthTabs extends React.Component {
                     </List>} />
               </TabContainer>
               <TabContainer dir={theme.direction}>
-                <Contact></Contact>
+                <Contact />
               </TabContainer>
             </SwipeableViews>
           </MuiThemeProvider>
