@@ -16,8 +16,8 @@ const styles = {
   },
   paperFront: {
     margin: `auto`,
-    maxWidth: `50%`,
-    paddingTop: `5.5%`,
+    maxWidth: `53%`,
+    paddingTop: `25vh`,
     verticalAlign: `middle`,
   },
   nameHeader: {
@@ -63,17 +63,17 @@ const Header = ({ personTitle, personDescription }) => (
           />
           <div style={{ paddingTop: `2.5%` }}>{personDescription}</div>
           <div style={{ verticalAlign: `top` , paddingBottom: `3%`}}>
-            <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
+            <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
               <Icon>
                 <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
               </Icon>
             </Link>
-            <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
+            <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
               <Icon>
                 <FaToolbox size={styles.iconSize} color={styles.iconColor} />
               </Icon>
             </Link>
-            <Link to='info-tabs' style={{backgroundImage: 'none'}}smooth={true}>
+            <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
               <Icon>
                 <FaPhone size={styles.iconSize} color={styles.iconColor} />
               </Icon>

@@ -208,7 +208,7 @@ class FullWidthTabs extends React.Component {
                                     </a>
                                   </div>
 
-                                  <Carousel infiniteLoop>
+                                  <Carousel infiniteLoop autoPlay stopOnHover>
                                     <div>
                                       <img
                                         src={
