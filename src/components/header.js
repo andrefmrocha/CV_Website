@@ -48,7 +48,7 @@ const styles = {
 
 
 const Header = ({ personTitle, personDescription }) => (
-  <Paper style={styles.paperContainer}>
+  <Paper style={styles.paperContainer} square>
     <div style={styles.paperFront}>
       <h1 style={{ margin: 0 }}>
         <Paper style={styles.nameHeader}>

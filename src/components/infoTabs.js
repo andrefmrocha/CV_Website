@@ -84,6 +84,12 @@ const panelStyling = {
       textShadow: `0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;`,
     },
   },
+  images: {
+    /* width: `100%`,
+    height: `33%`,
+    objectFit: `fill` */
+    marginBottom: `0px`
+  }
 }
 
 TabContainer.propTypes = {
@@ -202,13 +208,14 @@ class FullWidthTabs extends React.Component {
                                     </a>
                                   </div>
 
-                                  <Carousel>
+                                  <Carousel infiniteLoop>
                                     <div>
                                       <img
                                         src={
                                           post.node.frontmatter.image_1
                                             .publicURL
                                         }
+                                        style={panelStyling.images}
                                       />
                                       <p className="legend">
                                         {
@@ -223,6 +230,7 @@ class FullWidthTabs extends React.Component {
                                           post.node.frontmatter.image_2
                                             .publicURL
                                         }
+                                        style={panelStyling.images}
                                       />
                                       <p className="legend">
                                         {
