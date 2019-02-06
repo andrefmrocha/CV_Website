@@ -4,6 +4,7 @@ import Image from '../images/background.jpeg'
 import { FaUserCircle, FaToolbox, FaPhone } from 'react-icons/fa'
 import { Link, animateScroll as scroll} from 'react-scroll';
 import Icon from '../components/icon'
+import { Grid } from '@material-ui/core';
 
 const styles = {
   paperContainer: {
@@ -16,13 +17,12 @@ const styles = {
   },
   paperFront: {
     margin: `auto`,
-    maxWidth: `53%`,
     paddingTop: `25vh`,
     verticalAlign: `middle`,
   },
   nameHeader: {
     color: `#f3f3f3`,
-    backgroundColor: `rgba(255, 255, 255, 0.4)`,
+    // backgroundColor: `#25273285`,
     textDecoration: `none`,
     textAlign: `center`,
     verticalAlign: `baseline`,
@@ -51,35 +51,57 @@ const Header = ({ personTitle, personDescription }) => (
   <Paper style={styles.paperContainer} square>
     <div style={styles.paperFront}>
       <h1 style={{ margin: 0 }}>
-        <Paper style={styles.nameHeader}>
-          <div style={{ marginBottom: `2.5%` }}>{personTitle}</div>
-          <div
-            style={{
-              border: `1px solid white`,
-              maxWidth: `90%`,
-              marginLeft: `auto`,
-              marginRight: `auto`,
-            }}
-          />
-          <div style={{ paddingTop: `2.5%` }}>{personDescription}</div>
-          <div style={{ verticalAlign: `top` , paddingBottom: `3%`}}>
-            <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
-              <Icon>
-                <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
-              </Icon>
-            </Link>
-            <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
-              <Icon>
-                <FaToolbox size={styles.iconSize} color={styles.iconColor} />
-              </Icon>
-            </Link>
-            <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
-              <Icon>
-                <FaPhone size={styles.iconSize} color={styles.iconColor} />
-              </Icon>
-            </Link>
+        <Grid container spacing={24} >
+          <Grid item xs={4} style={{
+            float: `left`,
+          }}>
+            <Grid style={{ verticalAlign: `top` , paddingBottom: `3%`}} container spacing={24}>
+              <Grid item xs={12}>
+                <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
+                  <Icon>
+                    <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
+                  </Icon>
+                </Link>
+                <Grid item xs={12}>
+              </Grid>
+                <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
+                  <Icon>
+                    <FaToolbox size={styles.iconSize} color={styles.iconColor} />
+                  </Icon>
+                </Link>
+                <Grid item xs={12}>
+              </Grid>
+                <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
+                  <Icon>
+                    <FaPhone size={styles.iconSize} color={styles.iconColor} />
+                  </Icon>
+                </Link>
+              </Grid>
+              </Grid>
+          </Grid>
+          <Grid item xs={8} style={{
+            float: `right`,
+            paddingRight: `11%`
+          }}>
+          <div>
+            <div style={{ 
+              marginBottom: `2.5%` , 
+              paddingTop: `4%`,
+              float: `right`,
+              paddingBottom: `4%`              
+              }}>{personTitle}</div>
+            {/* <div
+              style={{
+                border: `1px solid white`,
+                maxWidth: `90%`,
+                marginLeft: `auto`,
+                marginRight: `auto`,
+              }}
+            /> */}
+            <div style={{ paddingTop: `2.5%`, float: `right` }}>{personDescription}</div>
           </div>
-        </Paper>
+          </Grid>
+        </Grid>
       </h1>
     </div>
   </Paper>

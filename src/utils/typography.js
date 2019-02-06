@@ -1,6 +1,6 @@
-import Typography from 'typography'
-import doelger from 'typography-theme-doelger'
+// import Typography from 'typography'
+// import doelger from 'typography-theme-doelger'
 
-const typography = new Typography(doelger);
+// const typography = new Typography(doelger);
 
-export default typography;
+// export default typography;

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Andre Rocha`,
+    title: `André Rocha`,
     description: `Computer Engineering Student @FEUP`,
     author: `@andrefmrocha`,
   },
@@ -40,12 +40,12 @@ module.exports = {
         // Add any options here
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //   },
+    // },
     `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-transformer-remark`,

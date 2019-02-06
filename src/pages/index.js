@@ -6,12 +6,15 @@ import Image from '../components/image'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import InfoTabs from '../components/infoTabs'
+import Typography from '@material-ui/core/Typography'
 
 const IndexPage = () => (
-  <Layout>
-    <InfoTabs>
-    </InfoTabs>
-  </Layout>
+  <Typography>
+    <Layout>
+      <InfoTabs>
+      </InfoTabs>
+    </Layout>
+  </Typography>
 )
 
 export default IndexPage
