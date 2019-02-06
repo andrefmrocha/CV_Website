@@ -16,7 +16,7 @@ const styles = {
     verticalAlign: `middle`,
   },
   paperFront: {
-    margin: `auto`,
+    margin: `0px`,
     paddingTop: `25vh`,
     verticalAlign: `middle`,
   },
@@ -51,7 +51,7 @@ const Header = ({ personTitle, personDescription }) => (
   <Paper style={styles.paperContainer} square>
     <div style={styles.paperFront}>
       <h1 style={{ margin: 0 }}>
-        <Grid container spacing={24} >
+        <Grid container spacing={20} >
           <Grid item xs={4} style={{
             float: `left`,
           }}>
@@ -62,25 +62,24 @@ const Header = ({ personTitle, personDescription }) => (
                     <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
                   </Icon>
                 </Link>
-                <Grid item xs={12}>
               </Grid>
+              <Grid item xs={12}>
                 <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
                   <Icon>
                     <FaToolbox size={styles.iconSize} color={styles.iconColor} />
                   </Icon>
                 </Link>
-                <Grid item xs={12}>
               </Grid>
+              <Grid item xs={12}>
                 <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
                   <Icon>
                     <FaPhone size={styles.iconSize} color={styles.iconColor} />
                   </Icon>
                 </Link>
               </Grid>
-              </Grid>
+            </Grid>
           </Grid>
           <Grid item xs={8} style={{
-            float: `right`,
             paddingRight: `11%`
           }}>
           <div>
@@ -90,14 +89,6 @@ const Header = ({ personTitle, personDescription }) => (
               float: `right`,
               paddingBottom: `4%`              
               }}>{personTitle}</div>
-            {/* <div
-              style={{
-                border: `1px solid white`,
-                maxWidth: `90%`,
-                marginLeft: `auto`,
-                marginRight: `auto`,
-              }}
-            /> */}
             <div style={{ paddingTop: `2.5%`, float: `right` }}>{personDescription}</div>
           </div>
           </Grid>
