@@ -21,7 +21,7 @@ const styles = {
     verticalAlign: `middle`,
   },
   nameHeader: {
-    color: `#f3f3f3`,
+    color: `#0000000`,
     // backgroundColor: `#25273285`,
     textDecoration: `none`,
     textAlign: `center`,
@@ -40,7 +40,7 @@ const styles = {
     borderRadius: `100px`,
   },
   iconSize: 45,
-  iconColor: `#2B4251`,
+  iconColor: `#d73a31de`,
   textInfo: {
     display: `inline-block`,
   },
@@ -80,14 +80,15 @@ const Header = ({ personTitle, personDescription }) => (
             </Grid>
           </Grid>
           <Grid item xs={8} style={{
-            paddingRight: `11%`
+            paddingRight: `11%`,
+            color: `#032b2f`
           }}>
           <div>
             <div style={{ 
               marginBottom: `2.5%` , 
               paddingTop: `4%`,
               float: `right`,
-              paddingBottom: `4%`              
+              paddingBottom: `4%`,
               }}>{personTitle}</div>
             <div style={{ paddingTop: `2.5%`, float: `right` }}>{personDescription}</div>
           </div>

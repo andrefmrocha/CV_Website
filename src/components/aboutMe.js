@@ -40,9 +40,10 @@ const AboutPanel = withStyles(
 
 
 const StyledPaper = withStyles({
-    root: {
-        // backgroundColor: `red`,
-    }
+  root: {
+    backgroundColor: `#d73a3173`,
+    verticalAlign: `center`
+  },
 })(Paper)
 const styles = {
   title: {
@@ -50,7 +51,7 @@ const styles = {
     paddingBottom: `2%`,
     paddingRight: `5%`,
     marginTop: `0`,
-    paddingTop: `2%`
+    paddingTop: `2%`,
   },
   image: {
     /* width: 100,
@@ -60,53 +61,60 @@ const styles = {
   text: {
     color: `#bdbdbd`,
   },
-  paper:{
+  paper: {
     //   textAlign: `center`,
     paddingLeft: `3%`,
     paddingBottom: `3%`,
     // height: `400px`
   },
-  h:{
-      marginTop:0,
-      marginBottom:0,
-      textAlign: `center`,
+  h: {
+    marginTop: 0,
+    marginBottom: 0,
+    textAlign: `center`,
   },
-  titleh:{
-    paddingTop: `5%`
+  titleh: {
+    paddingTop: `5%`,
   },
-  subtitle:{
-      paddingBottom: `2%`
+  subtitle: {
+    paddingBottom: `2%`,
   },
-  scale:{
-      width: `23px`,
-      height :`23px`,
-      float: `right`
+  scale: {
+    width: `23px`,
+    height: `23px`,
+    float: `right`,
   },
-  skillsGrid:{
-      maxWidth: `100%`
+  skillsGrid: {
+    maxWidth: `100%`,
   },
-  leftGrid:{
-      borderLeft: `0.5px solid black`
+  leftGrid: {
+    //   borderLeft: `0.5px solid black`
   },
-  skills:{
-    fontSize: `calc(1vw + 1vh + 1vmin)`
-  }
+  skills: {
+    fontSize: `calc(1vw + 1vh + 1vmin)`,
+    display: `inline-block`,
+    padding: `1% 3% 2% 3%`,
+    width: `25%`,
+    textAlign: `center`
+  },
+  panel: {
+    backgroundColor: `#032b2fba`,
+  },
 }
 
 const About = () => (
   <List>
     <ListItem>
       <ListItemText>
-        <AboutPanel>
+        <AboutPanel style={styles.panel}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <h2 style={styles.title}>Biography</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <Grid container spacing={24}>
-              <Grid item xs={5}>
+              <Grid item xs={6}>
                 <img src={Me} style={styles.image} />
               </Grid>
-              <Grid item xs={7} style={styles.text}>
+              <Grid item xs={6} style={styles.text}>
                 <p>
                   A passionate computer science student with an ever going
                   interest in Web Development and AI. Using my free time to
@@ -133,23 +141,25 @@ const About = () => (
     </ListItem>
     <ListItem>
       <ListItemText>
-        <AboutPanel>
+        <AboutPanel style={styles.panel}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <h2 style={styles.title}>Education</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container spacing={24} alignItems="center" justify="center">
-            <Grid item xs={4}>
+            <div style={{
+                textAlign: `center`,
+                width: `77%`,
+                margin: `auto`
+            }}>
+            <div>
                 <StyledPaper style={styles.paper} square>
                     <h4 style={Object.assign({}, styles.titleh, styles.h)}>Science and Technology</h4>
                     <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Colégio de Ermesinde</h5>
                     <FaMapMarkerAlt />
                     Ermesinde, Porto
-                    <br />
                     <FaCalendar /> Set 2004 - Jun 2017
-                    <br />
                     <FaGraduationCap /> Jun 2017
-                    <br />
+                    <br/>
                     <FaLink />
                     <a
                         target="_blank"
@@ -159,8 +169,8 @@ const About = () => (
                         https://www.colegiodeermesinde.com
                      </a>
                 </StyledPaper>
-            </Grid>
-            <Grid item xs={4}>
+            </div>
+            <div>
                 <StyledPaper style={styles.paper} square>
                     <h4 style={Object.assign({}, styles.titleh, styles.h)}>
                         Integrated Masters in Informatics and Computeer Engineering
@@ -170,11 +180,9 @@ const About = () => (
                     </h5>
                     <FaMapMarkerAlt />
                     Porto
-                    <br />
                     <FaCalendar /> Set 2017 - Today
-                    <br />
                     <FaGraduationCap /> Expected in June 2022
-                    <br />
+                    <br/>
                     <FaLink />
                     <a
                         target="_blank"
@@ -184,8 +192,8 @@ const About = () => (
                         https://sigarra.up.pt/feup/en/
                     </a>
                 </StyledPaper>
-            </Grid>
-            <Grid item xs={4}>
+            </div>
+            <div>
                 <StyledPaper style={styles.paper} square>
                     <h4 style={Object.assign({}, styles.titleh, styles.h)}>
                         Cambridge Certificate of Proficiency in English
@@ -193,9 +201,8 @@ const About = () => (
                     <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Cambridge University</h5>
                     <FaMapMarkerAlt />
                     Ermesinde, Porto
-                    <br />
                     <FaCalendar /> Jan 2018
-                    <br />
+                    <br/>
                     <FaLink />
                     <a
                         target="_blank"
@@ -205,27 +212,30 @@ const About = () => (
                         https://www.cambridgeenglish.org/exams-and-tests/proficiency/
                     </a>
                 </StyledPaper>
-            </Grid>
-            </Grid>
+            </div>
+            </div>
           </ExpansionPanelDetails>
         </AboutPanel>
       </ListItemText>
     </ListItem>
     <ListItem>
       <ListItemText>
-        <AboutPanel>
+        <AboutPanel style={styles.panel}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <h2 style={styles.title}>Experience</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container spacing={24} alignItems="center" justify="center">
-              <Grid item xs={4}>
+                <div style={{
+                    textAlign: `center`,
+                    width: `77%`,
+                    margin: `auto`
+                }}>
+                <div>
                 <StyledPaper style={styles.paper} square>
                   <h4 style={Object.assign({}, styles.titleh, styles.h)}>Member</h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>NIAEFEUP</h5>
                   <FaMapMarkerAlt />
                   FEUP, Porto
-                  <br />
                   <FaCalendar /> May 2018 - Today
                   <br />
                   <FaLink />
@@ -237,16 +247,14 @@ const About = () => (
                     https://ni.fe.up.pt
                   </a>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={4}>
+              </div>
+              <div>
                 <StyledPaper style={styles.paper} square>
                   <h4 style={Object.assign({}, styles.titleh, styles.h)}>Competitor and Organizer</h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Google Hash Code</h5>
                   <FaMapMarkerAlt />
                   Porto - Porto Hub
-                  <br />
                   <FaCalendar /> Mar 2018
-                  <br />
                   <FaMedal /> 24,520,507 points
                   <br />
                   <FaCode />
@@ -267,8 +275,8 @@ const About = () => (
                     https://sigarra.up.pt/feup/en/
                   </a>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={4}>
+              </div>
+              <div>
                 <StyledPaper style={styles.paper} square>
                   <h4 style={Object.assign({}, styles.titleh, styles.h)}>
                     Member of the Public Relations Department
@@ -276,7 +284,6 @@ const About = () => (
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Semana de Informática 2018</h5>
                   <FaMapMarkerAlt />
                   FEUP, Porto
-                  <br />
                   <FaCalendar /> Out 2018
                   <br />
                   <FaLink />
@@ -288,141 +295,141 @@ const About = () => (
                     https://sinf.pt
                   </a>
                 </StyledPaper>
-              </Grid>
-            </Grid>
+              </div>
+            </div>
           </ExpansionPanelDetails>
         </AboutPanel>
       </ListItemText>
     </ListItem>
     <ListItem>
       <ListItemText>
-        <AboutPanel>
+        <AboutPanel style={styles.panel}>
           <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
             <h2 style={styles.title}>Skills</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <Grid container spacing={24} style={styles.skills}>
-              <Grid item xs={12}>
+            <div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             C/C++ -    
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Javascript   
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Python    
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             React   
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Node.js   
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Begginer <img style={styles.scale} src={Green} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Begginer</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Bootstrap    
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Jquery   
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Linux    
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Proficient <img style={styles.scale} src={DiamondOne} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Bash    
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Intermediate <img style={styles.scale} src={Blue} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-              <Grid item xs={12}>
+              </div>
+              <div style={styles.skills}>
                 <StyledPaper>
                     <Grid container spacing={24}>
-                        <Grid item xs={5}>
+                        <Grid item xs={12}>
                             Git    
                         </Grid>
-                        <Grid item xs={7} style={styles.leftGrid}>
-                            <div> Expert <img style={styles.scale} src={DiamondTwo} /></div>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Expert</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
-              </Grid>
-            </Grid>
+              </div>
+            </div>
           </ExpansionPanelDetails>
         </AboutPanel>
       </ListItemText>

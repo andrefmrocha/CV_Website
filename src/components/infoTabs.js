@@ -28,9 +28,9 @@ import About from './aboutMe'
 const palette = createMuiTheme({
     palette: {
         primary: {
-            main:'#bdbdbd',
-            light: '#efefef',
-            dark: '#8d8d8d',
+            main:'#d73a31',
+            light: '#032b2f',
+            dark: '#032b2f',
             contrastText: '#000'
         },
         secondary: {
@@ -60,6 +60,9 @@ const StyledPanel = withStyles(
 
 
 const panelStyling = {
+  panel:{
+    backgroundColor: `red`
+  },
   h1: {
     color: `#bdbdbd`,
     paddingBottom: `2%`,
@@ -107,16 +110,16 @@ const StyledList = withStyles(
 
 const styles = theme => ({
   tabs: {
-    backgroundColor: `#494949`,
+    backgroundColor: `#62899e`,
     color: `#bdbdbd`,
   },
-  appBar:{
+  appBar: {
     padding: 0,
-    maxWidth: `100%`
+    maxWidth: `100%`,
   },
-  textColor:{
-      textColor: `#bdbdbd`
-  }
+  textColor: {
+    textColor: `#bdbdbd`,
+  },
 })
 
 class FullWidthTabs extends React.Component {
@@ -143,10 +146,10 @@ class FullWidthTabs extends React.Component {
               </Tabs>
             </AppBar>
             <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={this.state.value} onChangeIndex={this.handleChangeIndex} className={classes.tabs}>
-              <TabContainer dir={theme.direction}>
+              <TabContainer dir={theme.direction} style={panelStyling.panel}>
                 <About />
               </TabContainer>
-              <TabContainer dir={theme.direction}>
+              <TabContainer dir={theme.direction} style={panelStyling.panel}>
                 <StaticQuery query={graphql`
                     query projectsQuery {
                       allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
@@ -248,7 +251,7 @@ class FullWidthTabs extends React.Component {
                       ))}
                     </List>} />
               </TabContainer>
-              <TabContainer dir={theme.direction}>
+              <TabContainer dir={theme.direction} style={panelStyling.panel}>
                 <Contact />
               </TabContainer>
             </SwipeableViews>
