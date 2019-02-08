@@ -111,6 +111,11 @@ const styles = {
     display: `inline-block`,
     wordBreak: `break-word`,
     paddingRight: `2%`
+  },
+  icon: {
+    // width: `80px`,
+    maxWidth: `100%`,
+    height: `80px`
   }
 }
 
@@ -370,7 +375,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            C/C++   
+                            <img style={styles.icon} src={CLogo}/>   
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Proficient</div>
@@ -382,19 +387,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Javascript   
-                        </Grid>
-                        <Grid item xs={12} style={styles.leftGrid}>
-                            <div> Intermediate</div>
-                        </Grid>
-                    </Grid>
-                </StyledPaper>
-              </div>
-              <div style={styles.skills}>
-                <StyledPaper style={{marginBottom: `8px`}}>
-                    <Grid container spacing={24}>
-                        <Grid item xs={12}>
-                            Python    
+                            <img style={styles.icon} src={CPPLogo}/>   
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Proficient</div>
@@ -406,7 +399,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            React   
+                          <img style={styles.icon} src={JSLogo} />    
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Intermediate</div>
@@ -418,7 +411,31 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Node.js   
+                            <img style={styles.icon} src={PythonLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient</div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div style={styles.skills}>
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={ReactLogo}/>     
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate</div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div style={styles.skills}>
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={NodeLogo}/>    
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Begginer</div>
@@ -430,7 +447,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Bootstrap    
+                            <img style={styles.icon} src={BootstrapLogo}/>      
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Proficient</div>
@@ -442,7 +459,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Jquery   
+                            <img style={styles.icon} src={JqueryLogo}/>     
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Intermediate</div>
@@ -454,7 +471,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Linux    
+                            <img style={styles.icon} src={LinuxLogo}/>      
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Proficient</div>
@@ -466,7 +483,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Bash    
+                            <img style={styles.icon} src={BashLogo}/>      
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Intermediate</div>
@@ -478,7 +495,7 @@ const About = () => (
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            Git    
+                            <img style={styles.icon} src={GitLogo}/>      
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Expert</div>
