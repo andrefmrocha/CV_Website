@@ -43,7 +43,7 @@ const styles = {
   iconColor: `#d73a31de`,
   textInfo: {
     display: `inline-block`,
-  },
+  }
 }
 
 

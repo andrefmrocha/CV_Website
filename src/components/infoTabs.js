@@ -67,6 +67,8 @@ const panelStyling = {
     color: `#bdbdbd`,
     paddingBottom: `2%`,
     paddingRight: `5%`,
+    paddingTop: `4%`,
+    maxWidth: `100%`
   },
   subtitle: {
     color: `#bdbdbd`,
@@ -92,7 +94,10 @@ const panelStyling = {
     height: `33%`,
     objectFit: `fill` */
     marginBottom: `0px`
-  }
+  },
+  panel: {
+    backgroundColor: `#032b2fba`,
+  },
 }
 
 TabContainer.propTypes = {
@@ -179,7 +184,7 @@ class FullWidthTabs extends React.Component {
                       {data.allMarkdownRemark.edges.map(post => (
                         <ListItem>
                           <ListItemText>
-                            <StyledPanel>
+                            <StyledPanel style={panelStyling.panel}>
                               <ExpansionPanelSummary
                                 expandIcon={<ExpandMoreIcon />}
                               >

@@ -6,7 +6,7 @@ const Icon = posed.div({
     pressable: true,
     init: {
         scale: 1,
-        margin: `17% 12% 0px 13%`,
+        margin: `0px 12% 5% 13%`,
         display: `inline-block`
     },
     hover: { scale: 1.4 },

@@ -14,7 +14,7 @@ const styles = {
   },
   link: {
     backgroundImage: `none`,
-    color: `inherit`,
+    color: `#032b2f`,
     textShadow: `none`,
     paddingTop: `5%`
   },

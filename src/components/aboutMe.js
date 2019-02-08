@@ -15,10 +15,17 @@ import {
     withStyles,
 } from '@material-ui/core/styles'
 import Me from '../images/eu.jpeg'
-import Green from '../images/green.png'
-import Blue from '../images/blue.png'
-import DiamondOne from '../images/diamond-one.png'
-import DiamondTwo from '../images/diamond-two.png'
+import CLogo from '../images/c-logo.png'
+import CPPLogo from '../images/cpp_logo.png'
+import JSLogo from '../images/js-logo.png'
+import PythonLogo from '../images/python-logo.png'
+import ReactLogo from '../images/React-logo.png'
+import NodeLogo from '../images/node-js-logo.png'
+import BootstrapLogo from '../images/bootstrap-logo.png'
+import JqueryLogo from '../images/JQuery_logo.png'
+import LinuxLogo from '../images/Linux_logo.png'
+import BashLogo from '../images/bash-logo.png'
+import GitLogo from '../images/git-logo.png'
 import {
     FaMapMarkerAlt,
     FaCalendar,
@@ -42,7 +49,7 @@ const AboutPanel = withStyles(
 const StyledPaper = withStyles({
   root: {
     backgroundColor: `#d73a3173`,
-    verticalAlign: `center`
+    verticalAlign: `center`,
   },
 })(Paper)
 const styles = {
@@ -94,11 +101,17 @@ const styles = {
     display: `inline-block`,
     padding: `1% 3% 2% 3%`,
     width: `25%`,
-    textAlign: `center`
+    textAlign: `center`,
+    paddingBottom: `3%`
   },
   panel: {
     backgroundColor: `#032b2fba`,
   },
+  info:{
+    display: `inline-block`,
+    wordBreak: `break-word`,
+    paddingRight: `2%`
+  }
 }
 
 const About = () => (
@@ -155,19 +168,27 @@ const About = () => (
                 <StyledPaper style={styles.paper} square>
                     <h4 style={Object.assign({}, styles.titleh, styles.h)}>Science and Technology</h4>
                     <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Colégio de Ermesinde</h5>
-                    <FaMapMarkerAlt />
-                    Ermesinde, Porto
-                    <FaCalendar /> Set 2004 - Jun 2017
-                    <FaGraduationCap /> Jun 2017
+                    <div style={styles.info}>
+                      <FaMapMarkerAlt />
+                      Ermesinde, Porto
+                    </div>
+                    <div style={styles.info}>
+                      <FaCalendar /> Set 2004 - Jun 2017
+                    </div>
+                    <div style={styles.info}>
+                      <FaGraduationCap /> Jun 2017
+                    </div>
                     <br/>
-                    <FaLink />
-                    <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.colegiodeermesinde.com"
-                    >
-                        https://www.colegiodeermesinde.com
-                     </a>
+                    <div style={styles.info}>
+                      <FaLink />
+                      <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.colegiodeermesinde.com"
+                      >
+                          https://www.colegiodeermesinde.com
+                      </a>
+                    </div>
                 </StyledPaper>
             </div>
             <div>
@@ -178,19 +199,27 @@ const About = () => (
                     <h5 style={Object.assign({}, styles.h, styles.subtitle)}>
                         Faculty of Engineering of Porto (FEUP)
                     </h5>
-                    <FaMapMarkerAlt />
-                    Porto
-                    <FaCalendar /> Set 2017 - Today
-                    <FaGraduationCap /> Expected in June 2022
+                    <div style={styles.info}>
+                      <FaMapMarkerAlt />
+                      Porto
+                    </div>
+                    <div style={styles.info}>
+                      <FaCalendar /> Set 2017 - Today
+                    </div>
+                    <div style={styles.info}>
+                      <FaGraduationCap /> Expected in June 2022
+                    </div>
                     <br/>
-                    <FaLink />
-                    <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://sigarra.up.pt/feup/en/"
-                    >
-                        https://sigarra.up.pt/feup/en/
-                    </a>
+                    <div style={styles.info}>
+                      <FaLink />
+                      <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://sigarra.up.pt/feup/en/"
+                      >
+                          https://sigarra.up.pt/feup/en/
+                      </a>
+                    </div>
                 </StyledPaper>
             </div>
             <div>
@@ -199,18 +228,24 @@ const About = () => (
                         Cambridge Certificate of Proficiency in English
                     </h4>
                     <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Cambridge University</h5>
-                    <FaMapMarkerAlt />
-                    Ermesinde, Porto
-                    <FaCalendar /> Jan 2018
+                    <div style={styles.info}>
+                      <FaMapMarkerAlt />
+                      Ermesinde, Porto
+                    </div>
+                    <div style={styles.info}>
+                      <FaCalendar /> Jan 2018
+                    </div>
                     <br/>
-                    <FaLink />
-                    <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.cambridgeenglish.org/exams-and-tests/proficiency/"
-                    >
-                        https://www.cambridgeenglish.org/exams-and-tests/proficiency/
-                    </a>
+                    <div style={styles.info}>
+                      <FaLink />
+                      <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href="https://www.cambridgeenglish.org/exams-and-tests/proficiency/"
+                      >
+                          https://www.cambridgeenglish.org/exams-and-tests/proficiency/
+                      </a>
+                    </div>
                 </StyledPaper>
             </div>
             </div>
@@ -234,46 +269,62 @@ const About = () => (
                 <StyledPaper style={styles.paper} square>
                   <h4 style={Object.assign({}, styles.titleh, styles.h)}>Member</h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>NIAEFEUP</h5>
-                  <FaMapMarkerAlt />
-                  FEUP, Porto
-                  <FaCalendar /> May 2018 - Today
+                  <div style={styles.info}>
+                    <FaMapMarkerAlt />
+                    FEUP, Porto
+                  </div>
+                  <div style={styles.info}>
+                    <FaCalendar /> May 2018 - Today
+                  </div>
                   <br />
-                  <FaLink />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://ni.fe.up.pt"
-                  >
-                    https://ni.fe.up.pt
-                  </a>
+                  <div style={styles.info}>
+                    <FaLink />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://ni.fe.up.pt"
+                    >
+                      https://ni.fe.up.pt
+                    </a>
+                  </div>
                 </StyledPaper>
               </div>
               <div>
                 <StyledPaper style={styles.paper} square>
                   <h4 style={Object.assign({}, styles.titleh, styles.h)}>Competitor and Organizer</h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Google Hash Code</h5>
-                  <FaMapMarkerAlt />
-                  Porto - Porto Hub
-                  <FaCalendar /> Mar 2018
-                  <FaMedal /> 24,520,507 points
+                  <div style={styles.info}>
+                    <FaMapMarkerAlt />
+                    Porto - Porto Hub
+                  </div>
+                  <div style={styles.info}>
+                    <FaCalendar /> Mar 2018
+                  </div>
+                  <div style={styles.info}>
+                    <FaMedal /> 24,520,507 points
+                  </div>
                   <br />
-                  <FaCode />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://codingcompetitions.withgoogle.com/hashcode/"
-                  >
-                    https://codingcompetitions.withgoogle.com/hashcode/
-                  </a>
+                  <div style={styles.info}>
+                    <FaCode />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://codingcompetitions.withgoogle.com/hashcode/"
+                    >
+                      https://codingcompetitions.withgoogle.com/hashcode/
+                    </a>
+                  </div>
                   <br />
-                  <FaLink />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://sigarra.up.pt/feup/en/"
-                  >
-                    https://sigarra.up.pt/feup/en/
-                  </a>
+                  <div style={styles.info}>
+                    <FaLink />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://sigarra.up.pt/feup/en/"
+                    >
+                      https://sigarra.up.pt/feup/en/
+                    </a>
+                  </div>
                 </StyledPaper>
               </div>
               <div>
@@ -282,18 +333,24 @@ const About = () => (
                     Member of the Public Relations Department
                   </h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Semana de Informática 2018</h5>
-                  <FaMapMarkerAlt />
-                  FEUP, Porto
-                  <FaCalendar /> Out 2018
+                  <div style={styles.info}>
+                    <FaMapMarkerAlt />
+                    FEUP, Porto
+                  </div>
+                  <div style={styles.info}>
+                    <FaCalendar /> Out 2018
+                  </div>
                   <br />
-                  <FaLink />
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://sinf.pt"
-                  >
-                    https://sinf.pt
-                  </a>
+                  <div style={styles.info}>
+                    <FaLink />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://sinf.pt"
+                    >
+                      https://sinf.pt
+                    </a>
+                  </div>
                 </StyledPaper>
               </div>
             </div>
@@ -310,10 +367,10 @@ const About = () => (
           <ExpansionPanelDetails>
             <div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            C/C++ -    
+                            C/C++   
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Proficient</div>
@@ -322,7 +379,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Javascript   
@@ -334,7 +391,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Python    
@@ -346,7 +403,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             React   
@@ -358,7 +415,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Node.js   
@@ -370,7 +427,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Bootstrap    
@@ -382,7 +439,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Jquery   
@@ -394,7 +451,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Linux    
@@ -406,7 +463,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Bash    
@@ -418,7 +475,7 @@ const About = () => (
                 </StyledPaper>
               </div>
               <div style={styles.skills}>
-                <StyledPaper>
+                <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             Git    
