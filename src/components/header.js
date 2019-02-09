@@ -90,6 +90,13 @@ const Header = ({ personTitle, personDescription }) => (
               float: `right`,
               paddingBottom: `4%`,
               }}>{personTitle}</div>
+            <hr style={{
+              width: `88%`,
+              height: `2px`,
+              backgroundImage: `linear-gradient(to right, rgba(3, 43, 47, 0), rgba(3, 43, 47, 1), rgba(3, 43, 47, 0))`,
+              float: `right`,
+
+            }} />
             <div style={{ paddingTop: `2.5%`, float: `right` }}>{personDescription}</div>
           </div>
           </Grid>

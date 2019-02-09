@@ -35,7 +35,8 @@ import {
     FaMedal
 }from 'react-icons/fa'
 
-import '../css/linkelements.css'
+import '../styles/linkelements.css'
+import '../styles/skills.css'
 //TO-DO CHANGE TEXT SO THAT ONLY TITLES ARE IN CENTER
 const AboutPanel = withStyles(
     {
@@ -371,7 +372,7 @@ const About = () => (
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
             <div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -383,7 +384,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -395,7 +396,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -407,7 +408,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -419,7 +420,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -431,7 +432,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -443,7 +444,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -455,7 +456,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -467,7 +468,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -479,7 +480,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
@@ -491,7 +492,7 @@ const About = () => (
                     </Grid>
                 </StyledPaper>
               </div>
-              <div style={styles.skills}>
+              <div className="skills">
                 <StyledPaper style={{marginBottom: `8px`}}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>

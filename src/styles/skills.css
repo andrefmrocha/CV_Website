@@ -1,0 +1,22 @@
+.skills{
+    font-size: calc(1vw + 1vh + 1vmin);
+    display: inline-block;
+    padding: 1% 3% 2% 3%;
+    text-align: center;
+    padding-bottom: 3%
+}
+@media (min-width: 300px){
+    .skills{
+        width: 50%;
+    }
+}
+@media (min-width: 700px){
+    .skills{
+        width: 32%;
+    }
+}
+@media (min-width: 1000px){
+    .skills{
+        width: 25%;
+    }
+}
