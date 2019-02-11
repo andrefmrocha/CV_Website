@@ -58,18 +58,26 @@ const StyledPanel = withStyles(
     }
 )(ExpansionPanel)
 
+const StyledSummary = withStyles(
+  {
+    root:{
+      maxWidth: `100%`
+    }
+  }
+)(ExpansionPanelSummary)
+
 
 const panelStyling = {
   panel:{
-    backgroundColor: `red`
+    backgroundColor: `red`,
+    maxWidth: `100%`
   },
   h1: {
     color: `#bdbdbd`,
     // paddingBottom: `2%`,
     paddingRight: `5%`,
     paddingTop: `3%`,
-    maxWidth: `100%`,
-    width: `100%`
+    display: `inline-block`
   },
   subtitle: {
     color: `#bdbdbd`,
@@ -186,16 +194,18 @@ class FullWidthTabs extends React.Component {
                         <ListItem>
                           <ListItemText>
                             <StyledPanel style={panelStyling.panel}>
-                              <ExpansionPanelSummary
+                              <StyledSummary
                                 expandIcon={<ExpandMoreIcon />}
                               >
+                              <div style={{maxWidth:`100%`, display:`inline-block`}}>
                                 <h3 style={panelStyling.h1}>
                                   {post.node.frontmatter.title}
                                 </h3>
                                 <p style={panelStyling.subtitle}>
                                   {post.node.frontmatter.subtitle}
                                 </p>
-                              </ExpansionPanelSummary>
+                              </div>
+                              </StyledSummary>
                               <ExpansionPanelDetails>
                                 <div>
                                   <div
