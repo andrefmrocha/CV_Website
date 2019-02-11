@@ -60,6 +60,7 @@ const styles = {
     paddingRight: `5%`,
     marginTop: `0`,
     paddingTop: `2%`,
+    width: `100%`
   },
   image: {
     /* width: 100,

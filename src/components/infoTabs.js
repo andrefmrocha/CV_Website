@@ -65,14 +65,15 @@ const panelStyling = {
   },
   h1: {
     color: `#bdbdbd`,
-    paddingBottom: `2%`,
+    // paddingBottom: `2%`,
     paddingRight: `5%`,
-    paddingTop: `4%`,
-    maxWidth: `100%`
+    paddingTop: `3%`,
+    maxWidth: `100%`,
+    width: `100%`
   },
   subtitle: {
     color: `#bdbdbd`,
-    paddingTop: `4%`,
+    paddingTop: `1.5%`,
   },
   text: {
     color: `#bdbdbd`,
