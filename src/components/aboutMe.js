@@ -73,6 +73,7 @@ const styles = {
     //   textAlign: `center`,
     paddingLeft: `3%`,
     paddingBottom: `3%`,
+    marginBottom: `10px`
     // height: `400px`
   },
   h: {
@@ -439,7 +440,7 @@ const About = () => (
                             <img style={styles.icon} src={NodeLogo}/>    
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
-                            <div> Begginer</div>
+                            <div> Beginner</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
