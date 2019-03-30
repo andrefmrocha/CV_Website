@@ -127,7 +127,9 @@ const About = () => (
     <ListItem>
       <ListItemText>
         <AboutPanel style={styles.panel}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon
+                                    style={{ color: `white` }}
+                                  />}>
             <h2 style={styles.title}>Biography</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -163,7 +165,9 @@ const About = () => (
     <ListItem>
       <ListItemText>
         <AboutPanel style={styles.panel}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon
+                                    style={{ color: `white` }}
+                                  />}>
             <h2 style={styles.title}>Education</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -264,7 +268,9 @@ const About = () => (
     <ListItem>
       <ListItemText>
         <AboutPanel style={styles.panel}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon
+                                    style={{ color: `white` }}
+                                  />}>
             <h2 style={styles.title}>Experience</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
@@ -369,7 +375,9 @@ const About = () => (
     <ListItem>
       <ListItemText>
         <AboutPanel style={styles.panel}>
-          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+          <ExpansionPanelSummary expandIcon={<ExpandMoreIcon
+                                    style={{ color: `white` }}
+                                  />}>
             <h2 style={styles.title}>Skills</h2>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
