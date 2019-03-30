@@ -49,7 +49,7 @@ const AboutPanel = withStyles(
 
 const StyledPaper = withStyles({
   root: {
-    backgroundColor: `#d73a3173`,
+    backgroundColor: `#7C322C`,
     verticalAlign: `center`,
   },
 })(Paper)
@@ -60,7 +60,7 @@ const styles = {
     paddingRight: `5%`,
     marginTop: `0`,
     paddingTop: `2%`,
-    width: `100%`
+    width: `100%`,
   },
   image: {
     /* width: 100,
@@ -74,7 +74,7 @@ const styles = {
     //   textAlign: `center`,
     paddingLeft: `3%`,
     paddingBottom: `3%`,
-    marginBottom: `10px`
+    marginBottom: `10px`,
     // height: `400px`
   },
   h: {
@@ -105,21 +105,21 @@ const styles = {
     padding: `1% 3% 2% 3%`,
     width: `25%`,
     textAlign: `center`,
-    paddingBottom: `3%`
+    paddingBottom: `3%`,
   },
   panel: {
-    backgroundColor: `#032b2fba`,
+    backgroundColor: `#0D1321`,
   },
-  info:{
+  info: {
     display: `inline-block`,
     wordBreak: `break-word`,
-    paddingRight: `2%`
+    paddingRight: `2%`,
   },
   icon: {
     // width: `80px`,
     maxWidth: `100%`,
-    height: `80px`
-  }
+    height: `80px`,
+  },
 }
 
 const About = () => (

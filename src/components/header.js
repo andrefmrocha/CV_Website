@@ -40,10 +40,10 @@ const styles = {
     borderRadius: `100px`,
   },
   iconSize: 45,
-  iconColor: `#d73a31de`,
+  iconColor: `#170F02`,
   textInfo: {
     display: `inline-block`,
-  }
+  },
 }
 
 
@@ -51,27 +51,53 @@ const Header = ({ personTitle, personDescription }) => (
   <Paper style={styles.paperContainer} square>
     <div style={styles.paperFront}>
       <h1 style={{ margin: 0 }}>
-        <Grid container spacing={20} >
-          <Grid item xs={4} style={{
-            float: `left`,
-          }}>
-            <Grid style={{ verticalAlign: `top` , paddingBottom: `3%`}} container spacing={24}>
+        <Grid container spacing={20}>
+          <Grid
+            item
+            xs={4}
+            style={{
+              float: `left`,
+            }}
+          >
+            <Grid
+              style={{ verticalAlign: `top`, paddingBottom: `3%` }}
+              container
+              spacing={24}
+            >
               <Grid item xs={12}>
-                <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
+                <Link
+                  to="info-tabs"
+                  style={{ backgroundImage: 'none' }}
+                  smooth={true}
+                >
                   <Icon>
-                    <FaUserCircle size={styles.iconSize} color={styles.iconColor} />
+                    <FaUserCircle
+                      size={styles.iconSize}
+                      color={styles.iconColor}
+                    />
                   </Icon>
                 </Link>
               </Grid>
               <Grid item xs={12}>
-                <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
+                <Link
+                  to="info-tabs"
+                  style={{ backgroundImage: 'none' }}
+                  smooth={true}
+                >
                   <Icon>
-                    <FaToolbox size={styles.iconSize} color={styles.iconColor} />
+                    <FaToolbox
+                      size={styles.iconSize}
+                      color={styles.iconColor}
+                    />
                   </Icon>
                 </Link>
               </Grid>
               <Grid item xs={12}>
-                <Link to='info-tabs' style={{backgroundImage: 'none'}} smooth={true}>
+                <Link
+                  to="info-tabs"
+                  style={{ backgroundImage: 'none' }}
+                  smooth={true}
+                >
                   <Icon>
                     <FaPhone size={styles.iconSize} color={styles.iconColor} />
                   </Icon>
@@ -79,26 +105,29 @@ const Header = ({ personTitle, personDescription }) => (
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={8} style={{
-            paddingRight: `11%`,
-            color: `#032b2f`
-          }}>
-          <div>
-            <div style={{ 
-              marginBottom: `2.5%` , 
-              paddingTop: `4%`,
-              float: `right`,
-              paddingBottom: `4%`,
-              }}>{personTitle}</div>
-            <hr style={{
-              width: `88%`,
-              height: `2px`,
-              backgroundImage: `linear-gradient(to right, rgba(3, 43, 47, 0), rgba(3, 43, 47, 1), rgba(3, 43, 47, 0))`,
-              float: `right`,
-
-            }} />
-            <div style={{ paddingTop: `2.5%`, float: `right` }}>{personDescription}</div>
-          </div>
+          <Grid
+            item
+            xs={8}
+            style={{
+              paddingRight: `11%`,
+              color: `#170F02`,
+            }}
+          >
+            <div>
+              <div
+                style={{
+                  marginBottom: `2.5%`,
+                  paddingTop: `4%`,
+                  float: `right`,
+                  paddingBottom: `4%`,
+                }}
+              >
+                {personTitle}
+              </div>
+              <div style={{ paddingTop: `2.5%`, float: `right` }}>
+                {personDescription}
+              </div>
+            </div>
           </Grid>
         </Grid>
       </h1>

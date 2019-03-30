@@ -14,7 +14,7 @@ const styles = {
   },
   link: {
     backgroundImage: `none`,
-    color: `#032b2f`,
+    color: `#0D1321`,
     textShadow: `none`,
     paddingTop: `5%`
   },
@@ -54,7 +54,6 @@ const contact = () => (
                 >
                 <Icon>
                     <FaGithub size={styles.iconSize}/>
-                    <div style={styles.iconText}>Github</div>
                 </Icon>
                 </a>
             </Grid>
@@ -70,7 +69,6 @@ const contact = () => (
                 >
                 <Icon>
                     <FaLinkedin size={styles.iconSize}/>
-                    <div style={styles.iconText}>LinkedIn</div>
                 </Icon>
                 </a>
             </Grid>
@@ -86,7 +84,6 @@ const contact = () => (
                 >
                 <Icon>
                     <FaEnvelope size={styles.iconSize}/>
-                    <div style={styles.iconText}>E-Mail</div>
                 </Icon>
                 </a>
             </Grid>
@@ -102,7 +99,6 @@ const contact = () => (
                 >
                 <Icon>
                     <FaFacebook size={styles.iconSize}/>
-                    <div style={styles.iconText}>Facebook</div>
                 </Icon>
                 </a>
             </Grid>

@@ -28,14 +28,14 @@ import About from './aboutMe'
 const palette = createMuiTheme({
     palette: {
         primary: {
-            main:'#d73a31',
-            light: '#032b2f',
-            dark: '#032b2f',
-            contrastText: '#000'
+            main:'#7C322C',
+            light: '#EB5E55',
+            dark: '#EB5E55',
+            contrastText: 'red'
         },
         secondary: {
             light: '#ff7961',
-            main: '#f44336',
+            main: '#170F02',
             dark: '#ba000d',
             contrastText: '#000',
         },
@@ -50,13 +50,11 @@ function TabContainer({ children, dir }) {
     );
 }
 
-const StyledPanel = withStyles(
-    {
-        root:{
-            backgroundColor: `inherit`,
-        }
-    }
-)(ExpansionPanel)
+const StyledPanel = withStyles({
+  root: {
+    backgroundColor: `red`,
+  },
+})(ExpansionPanel)
 
 const StyledSummary = withStyles(
   {
@@ -68,16 +66,16 @@ const StyledSummary = withStyles(
 
 
 const panelStyling = {
-  panel:{
-    backgroundColor: `red`,
-    maxWidth: `100%`
+  panel: {
+    backgroundColor: `#0D1321`,
+    maxWidth: `100%`,
   },
   h1: {
     color: `#bdbdbd`,
     // paddingBottom: `2%`,
     paddingRight: `5%`,
     paddingTop: `3%`,
-    display: `inline-block`
+    display: `inline-block`,
   },
   subtitle: {
     color: `#bdbdbd`,
@@ -102,10 +100,10 @@ const panelStyling = {
     /* width: `100%`,
     height: `33%`,
     objectFit: `fill` */
-    marginBottom: `0px`
+    marginBottom: `0px`,
   },
   panel: {
-    backgroundColor: `#032b2fba`,
+    backgroundColor: `#0D1321`,
   },
 }
 
@@ -122,19 +120,19 @@ const StyledList = withStyles(
     }
 )
 
-const styles = theme => ({
+const styles = {
   tabs: {
     backgroundColor: `#62899e`,
-    color: `#bdbdbd`,
+    color: `#170F02`,
   },
   appBar: {
     padding: 0,
     maxWidth: `100%`,
   },
   textColor: {
-    textColor: `#bdbdbd`,
+    textColor: `#170F02`,
   },
-})
+}
 
 class FullWidthTabs extends React.Component {
     state = {
@@ -151,22 +149,53 @@ class FullWidthTabs extends React.Component {
 
     render() {
         const { classes, theme } = this.props;
-        return <MuiThemeProvider theme={palette}>
-            <AppBar position="static" color="default" className={classes.appBar} style={{ padding: 0 }} id="info-tabs">
-              <Tabs value={this.state.value} onChange={this.handleChange} indicatorColor="primary" textColor="primary" fullWidth className={classes.tabs}>
+        return (
+          <MuiThemeProvider theme={palette}>
+            <AppBar
+              position="static"
+              color="default"
+              className={classes.appBar}
+              style={{ padding: 0 }}
+              id="info-tabs"
+            >
+              <Tabs
+                value={this.state.value}
+                onChange={this.handleChange}
+                indicatorColor="primary"
+                textColor="primary"
+                fullWidth
+                className={classes.tabs}
+              >
                 <Tab label="About Me" />
                 <Tab label="Projects" />
                 <Tab label="Contact" />
               </Tabs>
             </AppBar>
-            <SwipeableViews axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} index={this.state.value} onChangeIndex={this.handleChangeIndex} className={classes.tabs}>
-              <TabContainer dir={theme.direction} style={panelStyling.panel}>
+            <SwipeableViews
+              axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+              index={this.state.value}
+              onChangeIndex={this.handleChangeIndex}
+              className={classes.tabs}
+            >
+              <TabContainer
+                dir={theme.direction}
+                style={panelStyling.panel}
+              >
                 <About />
               </TabContainer>
-              <TabContainer dir={theme.direction} style={panelStyling.panel}>
-                <StaticQuery query={graphql`
+              <TabContainer
+                dir={theme.direction}
+                style={panelStyling.panel}
+              >
+                <StaticQuery
+                  query={graphql`
                     query projectsQuery {
-                      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+                      allMarkdownRemark(
+                        sort: {
+                          fields: [frontmatter___date]
+                          order: ASC
+                        }
+                      ) {
                         edges {
                           node {
                             id
@@ -189,22 +218,33 @@ class FullWidthTabs extends React.Component {
                         }
                       }
                     }
-                  `} render={data => <List>
+                  `}
+                  render={data => (
+                    <List>
                       {data.allMarkdownRemark.edges.map(post => (
                         <ListItem>
                           <ListItemText>
-                            <StyledPanel style={panelStyling.panel}>
+                            <ExpansionPanel style={panelStyling.panel}>
                               <StyledSummary
-                                expandIcon={<ExpandMoreIcon />}
+                                expandIcon={
+                                  <ExpandMoreIcon
+                                    style={{ color: `white` }}
+                                  />
+                                }
                               >
-                              <div style={{maxWidth:`100%`, display:`inline-block`}}>
-                                <h3 style={panelStyling.h1}>
-                                  {post.node.frontmatter.title}
-                                </h3>
-                                <p style={panelStyling.subtitle}>
-                                  {post.node.frontmatter.subtitle}
-                                </p>
-                              </div>
+                                <div
+                                  style={{
+                                    maxWidth: `100%`,
+                                    display: `inline-block`,
+                                  }}
+                                >
+                                  <h3 style={panelStyling.h1}>
+                                    {post.node.frontmatter.title}
+                                  </h3>
+                                  <p style={panelStyling.subtitle}>
+                                    {post.node.frontmatter.subtitle}
+                                  </p>
+                                </div>
                               </StyledSummary>
                               <ExpansionPanelDetails>
                                 <div>
@@ -227,7 +267,11 @@ class FullWidthTabs extends React.Component {
                                     </a>
                                   </div>
 
-                                  <Carousel infiniteLoop autoPlay stopOnHover>
+                                  <Carousel
+                                    infiniteLoop
+                                    autoPlay
+                                    stopOnHover
+                                  >
                                     <div>
                                       <img
                                         src={
@@ -261,17 +305,23 @@ class FullWidthTabs extends React.Component {
                                   </Carousel>
                                 </div>
                               </ExpansionPanelDetails>
-                            </StyledPanel>
+                            </ExpansionPanel>
                           </ListItemText>
                         </ListItem>
                       ))}
-                    </List>} />
+                    </List>
+                  )}
+                />
               </TabContainer>
-              <TabContainer dir={theme.direction} style={panelStyling.panel}>
+              <TabContainer
+                dir={theme.direction}
+                style={panelStyling.panel}
+              >
                 <Contact />
               </TabContainer>
             </SwipeableViews>
           </MuiThemeProvider>
+        )
     }
 }
 
