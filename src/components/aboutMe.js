@@ -26,6 +26,15 @@ import JqueryLogo from '../images/JQuery_logo.png'
 import LinuxLogo from '../images/Linux_logo.png'
 import BashLogo from '../images/bash-logo.png'
 import GitLogo from '../images/git-logo.png'
+import JavaLogo from '../images/java.png'
+import FlutterLogo from '../images/flutter-logo.png'
+import SqlLogo from '../images/sqlite-logo.png'
+import ScalaLogo from '../images/scala-logo.png'
+import Neo4jLogo from '../images/neo4j-logo.png'
+import KafkaLogo from '../images/kafka-logo.png'
+import KotlinLogo from '../images/kotlin-logo.png'
+import PhpLogo from '../images/php-logo.png'
+
 import {
     FaMapMarkerAlt,
     FaCalendar,
@@ -281,14 +290,14 @@ const About = () => (
                 }}>
                 <div>
                 <StyledPaper style={styles.paper} square>
-                  <h4 style={Object.assign({}, styles.titleh, styles.h)}>Member</h4>
+                  <h4 style={Object.assign({}, styles.titleh, styles.h)}>Event Manager</h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>NIAEFEUP</h5>
                   <div style={styles.info}>
                     <FaMapMarkerAlt />
                     FEUP, Porto
                   </div>
                   <div style={styles.info}>
-                    <FaCalendar /> May 2018 - Today
+                    <FaCalendar /> May 2019 - Today
                   </div>
                   <br />
                   <div style={styles.info}>
@@ -315,6 +324,9 @@ const About = () => (
                     <FaCalendar /> Mar 2018
                   </div>
                   <div style={styles.info}>
+                    <FaCalendar /> Mar 2019
+                  </div>
+                  <div style={styles.info}>
                     <FaMedal /> 24,520,507 points
                   </div>
                   <br />
@@ -329,22 +341,12 @@ const About = () => (
                     </a>
                   </div>
                   <br />
-                  <div style={styles.info}>
-                    <FaLink />
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://sigarra.up.pt/feup/en/"
-                    >
-                      https://sigarra.up.pt/feup/en/
-                    </a>
-                  </div>
                 </StyledPaper>
               </div>
               <div>
                 <StyledPaper style={styles.paper} square>
                   <h4 style={Object.assign({}, styles.titleh, styles.h)}>
-                    Member of the Public Relations Department
+                    Conference Co-Chair
                   </h4>
                   <h5 style={Object.assign({}, styles.h, styles.subtitle)}>Semana de Informática 2018</h5>
                   <div style={styles.info}>
@@ -352,7 +354,7 @@ const About = () => (
                     FEUP, Porto
                   </div>
                   <div style={styles.info}>
-                    <FaCalendar /> Out 2018
+                    <FaCalendar /> Out 2019
                   </div>
                   <br />
                   <div style={styles.info}>
@@ -437,7 +439,7 @@ const About = () => (
                             <img style={styles.icon} src={ReactLogo}/>     
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
-                            <div> Intermediate</div>
+                            <div> Proficient</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
@@ -449,7 +451,7 @@ const About = () => (
                             <img style={styles.icon} src={NodeLogo}/>    
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
-                            <div> Beginner</div>
+                            <div> Proficient </div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
@@ -485,7 +487,7 @@ const About = () => (
                             <img style={styles.icon} src={LinuxLogo}/>      
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
-                            <div> Proficient</div>
+                            <div> Expert</div>
                         </Grid>
                     </Grid>
                 </StyledPaper>
@@ -510,6 +512,102 @@ const About = () => (
                         </Grid>
                         <Grid item xs={12} style={styles.leftGrid}>
                             <div> Expert</div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={JavaLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={FlutterLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={SqlLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Proficient </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={ScalaLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={KafkaLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={Neo4jLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Intermediate </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={KotlinLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Beginner </div>
+                        </Grid>
+                    </Grid>
+                </StyledPaper>
+              </div>
+              <div className="skills">
+                <StyledPaper style={{marginBottom: `8px`}}>
+                    <Grid container spacing={24}>
+                        <Grid item xs={12}>
+                            <img style={styles.icon} src={PhpLogo}/>      
+                        </Grid>
+                        <Grid item xs={12} style={styles.leftGrid}>
+                            <div> Beginner </div>
                         </Grid>
                     </Grid>
                 </StyledPaper>

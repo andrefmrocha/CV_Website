@@ -1,6 +1,6 @@
 ---
 title: "Visual Lab - Facial Recognition AI"
-subtitle: "A project done alongside INESC TEC with the purpose of developping facial recognition software in order
+subtitle: "A project done alongside INESC TEC with the purpose of developing facial recognition software in order
 to recognize the face of a person with their identity card, using Siamese Twins Neural Networks."
 link: https://github.com/andrefmrocha/VI_LAB_2018_Card_Detection
 image_1: "../images/siamese-network.png"
