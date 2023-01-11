@@ -19,7 +19,7 @@
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-plugin-typography": "^2.2.10",
     "gatsby-source-filesystem": "^2.0.28",
-    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.17",
     "lodash": "^4.17.15",
     "lodash.merge": "^4.6.2",
